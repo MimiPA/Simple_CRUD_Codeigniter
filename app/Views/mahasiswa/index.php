@@ -3,7 +3,7 @@
 
 <div class="container mt-5 mb-5">
     <div class="card">
-        <div class="card-header ">
+        <div class="card-header">
             <h2 class="text-center">Data Mahasiswa</h2>
         </div>
 
@@ -11,7 +11,7 @@
             <?php if (!empty(session()->getFlashdata('message'))) : ?>
                 <div class="alert alert-success alert-dismissible fade show" role="alert">
                     <?php echo session()->getFlashdata('message'); ?>
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <button type="button" class="close" data-bs-dismiss="alert" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
@@ -22,7 +22,7 @@
 
             <div class="table-responsive">
                 <table class="table table-bordered table-hover">
-                    <thead class="table-warning">
+                    <thead class="table-warning text-center">
                         <tr>
                             <th>Stambuk</th>
                             <th>Nama</th>
