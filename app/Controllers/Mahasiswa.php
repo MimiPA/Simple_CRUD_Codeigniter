@@ -119,4 +119,16 @@ class Mahasiswa extends BaseController
         session()->setFlashdata('message', 'Edit Data Mahasiswa Berhasil');
         return redirect()->to('/mahasiswa');
     }
+
+    function delete($id)
+    {
+        $dataMahasiswa = $this->mahasiswa->find($id);
+        if (empty($dataMahasiswa)) {
+            throw new \CodeIgniter\Exceptions\PageNotFoundException('Data Mahasiswa Tidak Ditemukan !');
+        }
+
+        $this->mahasiswa->delete($id);
+        session()->setFlashdata('message', 'Hapus Data Mahasiswa Berhasil');
+        return redirect()->to('/mahasiswa');
+    }
 }

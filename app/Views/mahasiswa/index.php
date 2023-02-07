@@ -46,7 +46,7 @@
                             <td><?= $row->alamat; ?></td>
                             <td>
                                 <a title="Edit" href="<?= base_url("mahasiswa/edit/$row->stambuk"); ?>" class="btn btn-info">Edit</a>
-                                <a title="Hapus" href="<?= base_url("mahasiswa/hapus/$row->stambuk"); ?>" class="btn btn-danger" onclick="return confirm('Apakah Anda yakin ingin menghapus data mahasiswa tersebut ?')">Hapus</a>
+                                <a title="Hapus" href="<?= base_url("mahasiswa/delete/$row->stambuk"); ?>" class="btn btn-danger" onclick="return confirm('Apakah Anda yakin ingin menghapus data mahasiswa tersebut ?')">Hapus</a>
                             </td>
                         </tr>
                     <?php
