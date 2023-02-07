@@ -13,12 +13,14 @@ class Mahasiswa extends BaseController
         $this->mahasiswa = new MahasiswaModel();
     }
 
+    //List For All Data Mahasiswa
     public function index()
     {
         $data['mahasiswa'] = $this->mahasiswa->findAll();
         return view('mahasiswa/index', $data);
     }
 
+    //Insert New Record Data Mahasiswa
     public function create()
     {
         return view('mahasiswa/create');
@@ -67,6 +69,7 @@ class Mahasiswa extends BaseController
         return redirect()->to('/mahasiswa');
     }
 
+    //Edit or Update Data Mahasiswa
     function edit($id)
     {
         $dataMahasiswa = $this->mahasiswa->find($id);
@@ -120,6 +123,7 @@ class Mahasiswa extends BaseController
         return redirect()->to('/mahasiswa');
     }
 
+    //Hapus or Delete Data Mahasiswa
     function delete($id)
     {
         $dataMahasiswa = $this->mahasiswa->find($id);
